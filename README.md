@@ -1,1 +1,1 @@
-# https://github.com/OndrejKrizek/UsercentricsTest.git
+# https://ondrejkrizek.github.io/UsercentricsTest
