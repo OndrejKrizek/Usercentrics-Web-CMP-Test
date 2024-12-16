@@ -1,1 +1,1 @@
-# [UsercentricsTest](https://github.com/OndrejKrizek/UsercentricsTest.git)
+# https://github.com/OndrejKrizek/UsercentricsTest.git
