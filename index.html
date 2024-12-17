@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <title>My CMP v2 Testpage</title>
+    <!-- for Google Consent Mode V2 -->
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("consent", "default", {
+            ad_user_data: "denied",
+            ad_personalization: "denied",
+            ad_storage: "denied",
+            analytics_storage: "denied",
+            wait_for_update: 2000
+        });
+        gtag("set", "ads_data_redaction", true);
+    </script>
+    <!-- for Google Consent Mode V2 -->
     <!-- Usercentrics -->
     <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="59t-Jc3o3ppAgy" async></script>
     <!-- Usercentrics -->
+        <!-- Google Tag Manager -->
+    <script>(function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KJ4SPVRC');</script>
+    <!-- End Google Tag Manager -->    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSD8DE2B44"></script>
     <script>
@@ -39,16 +71,6 @@
       fbq('track', 'PageView');
     </script>
     <!-- End Facebook Pixel Code -->
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-KJ4SPVRC');</script>
-    <!-- End Google Tag Manager -->
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
