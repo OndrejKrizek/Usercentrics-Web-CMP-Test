@@ -163,6 +163,30 @@
         <h2 id="contact">Contact Us</h2>
         <p>For more information, please get in touch with our support team. And of course, review your <a href="#" onClick="UC_UI.showSecondLayer();">Privacy Settings</a>.</p>
     </section>
+    <form action="#" method="post">
+        <h2>Visitor Information</h2>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <div class="checkbox-group">
+            <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+            <label for="privacyPolicy">I agree to the <a href="https://usercentrics.com/privacy-policy/" target="_blank">privacy policy</a>.</label>
+        </div>
+        
+        <div class="checkbox-group">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">I consent to Usercentrics Audience Unlocker Test.</label>
+        </div>
+        
+        <input type="submit" value="Submit">
+    </form>
     <iframe width="100%" scrolling="no" src="https://usercentrics-4.privacy.saymine.io/usercentrics-4" style="border: none; height: 2000px;"></iframe>
     <footer>
         <p>&copy; 2024 Usercentrics Test. All rights reserved.</p>
