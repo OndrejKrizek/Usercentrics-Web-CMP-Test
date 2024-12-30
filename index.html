@@ -20,10 +20,13 @@
         gtag("set", "ads_data_redaction", true);
     </script>
     <!-- for Google Consent Mode V2 -->
-    <!-- Usercentrics -->
+    <!-- Usercentrics CMP -->
     <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="59t-Jc3o3ppAgy" async></script>
-    <!-- Usercentrics -->
-        <!-- Google Tag Manager -->
+    <!-- Usercentrics CMP -->
+    <!-- Usercentrics PMP -->
+    <script src="https://dc.preference-management.usercentrics.eu/latest/data-collector.js"></script>
+    <!-- Usercentrics PMP -->
+    <!-- Google Tag Manager -->
     <script>(function(w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
@@ -161,9 +164,9 @@
         <h2 id="services">Our Services</h2>
         <p>We provide a range of tools to ensure compliance with data protection regulations.</p>
         <h2 id="contact">Contact Us</h2>
-        <p>For more information, please get in touch with our support team. And of course, review your <a href="#" onClick="UC_UI.showSecondLayer();">Privacy Settings</a>.</p>
+        <p>For more information, please get in touch with our support team. And of course, review your <a href="#" onClick="UC_UI.showSecondLayer();">Privacy Settings</a> and <a href=https://app-preference.preference-management.usercentrics.eu/login/9453eee1-c929-4f93-9ab7-bd7faa727944?lng=[LANG_CODE]">Preference Center</a>.</p>
     </section>
-    <form action="#" method="post">
+    <form id="visitorForm" action="#" method="post">
         <h2>Visitor Information</h2>
         
         <label for="name">Name:</label>
@@ -186,7 +189,38 @@
         </div>
         
         <input type="submit" value="Submit">
-    </form>
+    </form>    
+    <script>
+      // Attach the preference management event listener
+      window.setupForm({
+        event: {
+          // The element selector that you want to listen for an event, can be a form, button, etc
+          // Use CSS selectors like:
+          // - .theElementClass
+          // - #theElementId
+          // - div.anything > form
+          elementSelector: '#visitorForm', // The form to capture preferences
+          eventType: "submit", // The event type, usually form submission
+          observeDomChanges: false,
+        },
+        widgetId: "18e4b53b-aacc-4f08-ab31-ee3b858e74df", // Unique widget ID
+        pacId: "9453eee1-c929-4f93-9ab7-bd7faa727944", // Configuration ID
+        publicApiKey: "848dc7eba646d5c2a698cdd7238699c36619cc6a004eb45a477314c618a11f57", // Public API key to authenticate
+        userId: {
+          selector: '#email' // Capture user ID (email)
+        },
+        inputs: [
+          {
+            selector: '#consent', // Element capturing user preferences
+            optionUuid: "fa6a06ec-1ef0-404d-a45f-45b45b2ec385", // Option ID for preferences,
+            validate: function () {
+              // (optional) Return validation result to prevent submission
+              return true;
+            }
+          }
+        ]
+      });
+    </script>
     <iframe width="100%" scrolling="no" src="https://usercentrics-4.privacy.saymine.io/usercentrics-4" style="border: none; height: 2000px;"></iframe>
     <footer>
         <p>&copy; 2024 Usercentrics Test. All rights reserved.</p>
