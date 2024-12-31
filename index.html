@@ -166,6 +166,7 @@
         <h2 id="contact">Contact Us</h2>
         <p>For more information, please get in touch with our support team. And of course, review your <a href="#" onClick="UC_UI.showSecondLayer();">Privacy Settings</a> and <a href=https://app-preference.preference-management.usercentrics.eu/login/9453eee1-c929-4f93-9ab7-bd7faa727944?lng=[en]">Preference Center</a>.</p>
     </section>
+    <!-- Copilot Form -->
     <h1>Contact Us</h1>
     <form id="sheetdb-form" action="https://script.google.com/macros/s/AKfycbz_Zj52piDBVzJj3T56ft2atZtc4yKN--oOENS_NyCBvO1XwKDZFQa_a-BTYSmz76qd/exec" method="POST">
       <label for="name">Name:</label>
@@ -190,7 +191,9 @@
           }
         });
       });
-    </script>  
+    </script>
+    <!-- End Copilot Form -->
+    <!-- Usercentrics CMP -->
     <script>
       // Attach the preference management event listener
       window.setupForm({
@@ -200,7 +203,7 @@
           // - .theElementClass
           // - #theElementId
           // - div.anything > form
-          elementSelector: '#visitorForm', // The form to capture preferences
+          elementSelector: '#[INSERT_FORM-ID_HERE]', // The form to capture preferences
           eventType: "submit", // The event type, usually form submission
           observeDomChanges: false,
         },
@@ -208,11 +211,11 @@
         pacId: "9453eee1-c929-4f93-9ab7-bd7faa727944", // Configuration ID
         publicApiKey: "848dc7eba646d5c2a698cdd7238699c36619cc6a004eb45a477314c618a11f57", // Public API key to authenticate
         userId: {
-          selector: '#email' // Capture user ID (email)
+          selector: '#[INSERT_USEREMAIL-FIELD-ID_HERE]' // Capture user ID (email)
         },
         inputs: [
           {
-            selector: '#consent', // Element capturing user preferences
+            selector: '#[INSERT_CONSENT-FIELD-ID_HERE]', // Element capturing user preferences
             optionUuid: "fa6a06ec-1ef0-404d-a45f-45b45b2ec385", // Option ID for preferences,
             validate: function () {
               // (optional) Return validation result to prevent submission
@@ -222,6 +225,7 @@
         ]
       });
     </script>
+    <!-- End Usercentrics CMP -->
     <iframe width="100%" scrolling="no" src="https://usercentrics-4.privacy.saymine.io/usercentrics-4" style="border: none; height: 2000px;"></iframe>
     <footer>
         <p>&copy; 2024 Usercentrics Test. All rights reserved.</p>
