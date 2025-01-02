@@ -162,39 +162,39 @@
         <p>For more information, please get in touch with our support team. And of course, review your <a href="#" onClick="UC_UI.showSecondLayer();">Privacy Settings</a> and <a href=https://app-preference.preference-management.usercentrics.eu/login/9453eee1-c929-4f93-9ab7-bd7faa727944?lng=EN">Preference Center</a>.</p>
     </section>
     <!-- Copilot Form -->
-            <h1 style="text-align: center;">Contact Us</h1>
-        <form id="sheetdb-form" action="https://script.google.com/macros/s/AKfycbz_Zj52piDBVzJj3T56ft2atZtc4yKN--oOENS_NyCBvO1XwKDZFQa_a-BTYSmz76qd/exec" method="POST" style="display: flex; flex-direction: column; align-items: center;">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <label style="margin-top: 10px;">
-            <input type="checkbox" name="privacy" required>
-            I agree to the <a href="https://usercentrics.com/privacy-policy/" target="_blank">privacy policy</a>.
-          </label>
-          <label style="margin-top: 10px;">
-            <input type="checkbox" name="consent" required>
-            I consent to Usercentrics PMP Test.
-          </label>
-          <input type="submit" value="Submit" style="margin-top: 20px;">
-        </form>
-        <p id="confirmation" style="text-align: center; display: none;">Thank you for your submission!</p>
-        
-        <script>
-          document.querySelector("form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            fetch(event.target.action, {
-              method: event.target.method,
-              body: new FormData(event.target),
-              headers: { 'Accept': 'application/json' }
-            }).then(response => {
-              if (response.ok) {
-                document.getElementById("confirmation").style.display = "block";
-                event.target.reset();
-              }
-            });
-          });
-        </script>
+    <h1 style="text-align: center;">Contact Us</h1>
+    <form id="sheetdb-form" action="https://script.google.com/macros/s/AKfycbz_Zj52piDBVzJj3T56ft2atZtc4yKN--oOENS_NyCBvO1XwKDZFQa_a-BTYSmz76qd/exec" method="POST" style="display: flex; flex-direction: column; align-items: center; width: 300px; margin: 0 auto;">
+      <label for="name" style="width: 100%; text-align: left;">Name:</label>
+      <input type="text" id="name" name="name" required style="width: 100%; margin-bottom: 10px;">
+      <label for="email" style="width: 100%; text-align: left;">Email:</label>
+      <input type="email" id="email" name="email" required style="width: 100%; margin-bottom: 10px;">
+      <label style="width: 100%; text-align: left; margin-bottom: 10px;">
+        <input type="checkbox" name="privacy" required>
+        I agree to the <a href="https://usercentrics.com/privacy-policy/" target="_blank">privacy policy</a>.
+      </label>
+      <label style="width: 100%; text-align: left; margin-bottom: 20px;">
+        <input type="checkbox" name="consent" required>
+        I consent to Usercentrics PMP Test.
+      </label>
+      <input type="submit" value="Submit" style="margin-top: 20px;">
+    </form>
+    <p id="confirmation" style="text-align: center; display: none;">Thank you for your submission!</p>
+    
+    <script>
+      document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        fetch(event.target.action, {
+          method: event.target.method,
+          body: new FormData(event.target),
+          headers: { 'Accept': 'application/json' }
+        }).then(response => {
+          if (response.ok) {
+            document.getElementById("confirmation").style.display = "block";
+            event.target.reset();
+          }
+        });
+      });
+    </script>
     <!-- End Copilot Form -->
     <!-- Usercentrics PMP -->
     <script src="https://dc.preference-management.usercentrics.eu/latest/data-collector.js"></script>
