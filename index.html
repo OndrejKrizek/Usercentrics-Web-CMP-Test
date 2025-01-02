@@ -219,11 +219,11 @@
         pacId: "9453eee1-c929-4f93-9ab7-bd7faa727944", // Configuration ID
         publicApiKey: "848dc7eba646d5c2a698cdd7238699c36619cc6a004eb45a477314c618a11f57", // Public API key to authenticate
         userId: {
-          selector: '#[email]' // Capture user ID (email)
+          selector: '#email' // Capture user ID (email)
         },
         inputs: [
           {
-            selector: '#[consent]', // Element capturing user preferences
+            selector: '#consent', // Element capturing user preferences
             optionUuid: "fa6a06ec-1ef0-404d-a45f-45b45b2ec385", // Option ID for preferences,
             validate: function () {
               // (optional) Return validation result to prevent submission
