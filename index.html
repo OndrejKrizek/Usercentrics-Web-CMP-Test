@@ -20,12 +20,9 @@
         gtag("set", "ads_data_redaction", true);
     </script>
     <!-- End for Google Consent Mode V2 -->
-    <!-- Usercentrics CMP -->
+    <!-- Usercentrics CMP (noscript) -->
     <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="59t-Jc3o3ppAgy" async></script>
-    <!-- End Usercentrics CMP -->
-    <!-- Usercentrics PMP -->
-    <script src="https://dc.preference-management.usercentrics.eu/latest/data-collector.js"></script>
-    <!-- End Usercentrics PMP -->
+    <!-- End Usercentrics CMP (noscript) -->
     <!-- Google Tag Manager -->
     <script>(function(w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -74,9 +71,9 @@
       fbq('track', 'PageView');
     </script>
     <!-- End Facebook Pixel Code -->
-    <!-- Usercentrics PMP -->
+    <!-- Usercentrics PMP (noscript) -->
     <script src="https://dc.preference-management.usercentrics.eu/latest/data-collector.js"></script>
-    <!-- End Usercentrics PMP -->
+    <!-- End Usercentrics PMP (noscript) -->
 </head>
 <!DOCTYPE html>
 <html lang="en">
@@ -185,7 +182,6 @@
       <input type="submit" value="Submit" style="margin-top: 20px;">
     </form>
     <p id="confirmation" style="text-align: center; display: none;">Thank you for your submission!</p>
-    <p></p>
     <script>
       document.querySelector("form").addEventListener("submit", function(event) {
         event.preventDefault();
