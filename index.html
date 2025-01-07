@@ -194,21 +194,15 @@
     <!-- End Copilot Form -->
     <!-- Usercentrics PMP -->
     <script>
-      // Attach the preference management event listener
       window.setupForm({
         event: {
-          // The element selector that you want to listen for an event, can be a form, button, etc
-          // Use CSS selectors like:
-          // - .theElementClass
-          // - #theElementId
-          // - div.anything > form
           elementSelector: '#sheetdb-form', // The form to capture preferences
           eventType: "submit", // The event type, usually form submission
           observeDomChanges: false,
         },
         widgetId: "a899fdaa-647b-4b34-bacd-bf555624446a", // Unique widget ID
         pacId: "d5dfd72d-5253-40dc-8b0d-0ddb70a053f1", // Configuration ID
-        publicApiKey: "f487eb8ecba08f2e036c246b7c56b514127523ca9f2dda4883918ddadf940989", // Public API key to authenticate
+        publicApiKey: "aa9f5e3d7484c30a38b352cce65f14c51aae3639940a4d7eac8ffa420a6c21da", // Public API key to authenticate
         userId: {
           selector: '#email' // Capture user ID (email)
         },
@@ -217,7 +211,6 @@
             selector: '#consent', // Element capturing user preferences
             optionUuid: "3567d247-d30b-4ec6-839b-e5077625f9d3", // Option ID for preferences,
             validate: function () {
-              // (optional) Return validation result to prevent submission
               return true;
             }
           }
