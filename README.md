@@ -1,1 +1,1 @@
-# https://ondrejkrizek.github.io/UsercentricsTest
+# https://ondrejkrizek.github.io/Usercentrics-Web-CMP-Test
