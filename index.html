@@ -29,6 +29,11 @@
     <!-- End Usercentrics CMP (noscript) -->
     <!-- Usercentrics SDP (noscript) -->
     <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            uc.changeOverlayStyle('single-button');
+        });
+    </script>
     <!-- End Usercentrics SDP (noscript) -->
     <!-- Google Tag Manager -->
     <script>(function(w, d, s, l, i) {
@@ -165,7 +170,7 @@
         <p>For more information, please get in touch with our support team. And of course, review your <a href="#" onClick="UC_UI.showSecondLayer();">Privacy Settings</a> and <a href="https://app-preference.preference-management.usercentrics.eu/login/d5dfd72d-5253-40dc-8b0d-0ddb70a053f1?lng=en">Preference Center</a>.</p>
     </section>
     <!-- YouTube Video -->
-    <div style="text-align: center;">
+    <div class="video-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/4tubhyI4iwk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <!-- End YouTube Video -->
