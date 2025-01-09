@@ -108,9 +108,11 @@
     <!-- End Usercentrics CMP (noscript) -->
     <!-- Usercentrics SDP (noscript) -->
     <script type="application/javascript" src="https://privacy-proxy.usercentrics.eu/latest/uc-block.bundle.js"></script>
-        <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
             uc.changeOverlayStyle('single-button');
+            var videoContainer = document.querySelector('.video-container');
+            videoContainer.classList.add('overlay-active');
         });
     </script>
     <!-- End Usercentrics SDP (noscript) -->
