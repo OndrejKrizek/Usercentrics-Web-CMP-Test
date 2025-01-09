@@ -4,6 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <title>Usercentrics Test</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f8fa;
+        }
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #333333;
+            text-decoration: none;
+        }
+        .hero {
+            background: url('https://example.com/hero-image.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 60px 20px;
+            text-align: center;
+            color: #00a2ff;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 18px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center; /* Centering the content */
+        }
+        .content h2, .content p {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            position: relative; /* Ensure overlay can be positioned */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+            visibility: hidden; /* Initially hidden */
+        }
+        .video-container.overlay-active .overlay {
+            visibility: visible; /* Show overlay when active */
+        }
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e0e0e0;
+            padding: 10px 20px;
+            text-align: center;
+            color: #666666;
+        }
+    </style>
     <!-- for Google Consent Mode V2 -->
     <script type="text/javascript">
         window.dataLayer = window.dataLayer || [];
@@ -71,6 +150,14 @@
     <!-- End Google Analytics -->
     <!-- Usercentrics PMP (noscript) -->
     <script src="https://dc.preference-management.usercentrics.eu/latest/data-collector.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            uc.changeOverlayStyle('single-button');
+            // Apply overlay only to the video container
+            var videoContainer = document.querySelector('.video-container');
+            videoContainer.classList.add('overlay-active');
+        });
+    </script>
     <!-- End Usercentrics PMP (noscript) -->
     <!-- Facebook Pixel Code -->
     <script type="text/plain" data-usercentrics="Facebook Pixel">
@@ -86,67 +173,6 @@
     <!-- End Facebook Pixel Code -->
 </head>
 <body>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f8fa;
-        }
-        header {
-            background-color: #ffffff;
-            border-bottom: 1px solid #e0e0e0;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333333;
-        }
-        nav a {
-            margin: 0 10px;
-            color: #333333;
-            text-decoration: none;
-        }
-        .hero {
-            background: url('https://example.com/hero-image.jpg') no-repeat center center;
-            background-size: cover;
-            padding: 60px 20px;
-            text-align: center;
-            color: #00a2ff;
-        }
-        .hero h1 {
-            font-size: 36px;
-            margin: 0;
-        }
-        .hero p {
-            font-size: 18px;
-        }
-        .content {
-            padding: 20px;
-            text-align: center; /* Centering the content */
-        }
-        .content h2, .content p {
-            margin: 0 auto;
-            max-width: 800px;
-        }
-        .video-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px 0;
-        }
-        footer {
-            background-color: #ffffff;
-            border-top: 1px solid #e0e0e0;
-            padding: 10px 20px;
-            text-align: center;
-            color: #666666;
-        }
-    </style>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJ4SPVRC" width="0" height="0"
             style="display:none;visibility:hidden"></iframe></noscript>
